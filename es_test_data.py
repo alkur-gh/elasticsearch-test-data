@@ -329,7 +329,6 @@ def generate_test_data():
             cmd = {
                 "index": {
                     "_index": tornado.options.options.index_name,
-                    "_type": tornado.options.options.index_type,
                 }
             }
             if "_id" in item:
@@ -355,7 +354,6 @@ def generate_test_data():
             cmd = {
                 "index": {
                     "_index": tornado.options.options.index_name,
-                    "_type": tornado.options.options.index_type,
                 }
             }
             if "_id" in item:
@@ -400,7 +398,6 @@ if __name__ == "__main__":
         default="test_data",
         help="Name of the index to store your messages",
     )
-    tornado.options.define("index_type", type=str, default="test_type", help="Type")
     tornado.options.define(
         "batch_size", type=int, default=1000, help="Elasticsearch bulk index batch size"
     )
