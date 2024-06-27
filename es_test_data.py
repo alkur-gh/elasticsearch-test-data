@@ -389,7 +389,7 @@ if __name__ == "__main__":
     tornado.options.define(
         "es_url",
         type=str,
-        default="http://localhost:9200/",
+        default="http://localhost:9200",
         help="URL of your Elasticsearch node",
     )
     tornado.options.define(
