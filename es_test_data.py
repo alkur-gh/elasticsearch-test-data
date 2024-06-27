@@ -33,7 +33,7 @@ _dict_data = None
 
 def delete_index(idx_name):
     try:
-        url = f"{tornado.options.options.es_url} {idx_name}"
+        url = f"{tornado.options.options.es_url}/{idx_name}"
         request = tornado.httpclient.HTTPRequest(
             url,
             headers=headers,
